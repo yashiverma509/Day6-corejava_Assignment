@@ -1,0 +1,22 @@
+create table books(
+id int not null auto_increment, 
+title varchar(50) not null, 
+isbn varchar(50) not null,
+author varchar(50) not null, 
+pubDate date not null,
+price double not null,
+primary key(id), unique key(isbn)
+);
+
+
+insert into books(isbn, title, author, pubDate, price) values('H21','c basics','ABC','2015-12-20',350);
+insert into books(isbn, title, author, pubDate, price) values('H22','c++ basics','Michel','2003-11-52',550);
+insert into books(isbn, title, author, pubDate, price) values('H23','java basics','krishnn','2000-05-24',950);
+insert into books(isbn, title, author, pubDate, price) values('H24','python basics','raj','2008-07-11',400);
+
+
+create table users(id int not null auto_increment primary key, username varchar(50) not null, password varchar(50) not null, profile varchar(50) not null);
+
+insert into users(username, password, profile) values('raj','raj123','admin');
+insert into users(username, password, profile) values('ekta','ekta123','mgr');
+insert into users(username, password, profile) values('gun','gun123','emp');
